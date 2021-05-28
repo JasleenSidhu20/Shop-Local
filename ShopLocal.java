@@ -3,6 +3,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
@@ -22,18 +23,18 @@ public class ShopLocal extends Application {
         this.primaryStage.setTitle("ShopLocal Website");
         showMainView();
 
-        /*Parent root = FXMLLoader.load(getClass().getResource("AppScene.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("AppScene.fxml"));
         Scene scene = new Scene(root);
         primaryStage.setTitle("Title");
         primaryStage.setScene(scene);
-        primaryStage.show();*/
+        primaryStage.show();
     }
     private void showMainView() throws IOException{
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(AppScene.class.getResource("AppScene.fxml"));
+//        loader.setLocation(AppScene.class.getResource("AppScene.fxml"));
         mainLayout = loader.load();
         Scene scene = new Scene(mainLayout);
         primaryStage.setScene(scene);
-        primaryStage.show()
-    }
+        primaryStage.show();
+    } 
 }
