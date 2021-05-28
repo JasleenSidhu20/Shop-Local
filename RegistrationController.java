@@ -1,8 +1,10 @@
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 
 public class RegistrationController {
-    //Small Business Information
+
     @FXML
     private TextField businessNameField;
 
@@ -26,5 +28,11 @@ public class RegistrationController {
 
     @FXML
     private TextField phoneNumberField;
+
+    @FXML
+    private ChoiceBox<?> businessTypeBox;
+
+    @FXML
+    private Button registrationSubmitButton;
 
 }
