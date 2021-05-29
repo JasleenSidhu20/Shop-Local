@@ -5,7 +5,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Menu;
+//import javafx.scene.control.Menu;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import java.io.IOException;
@@ -27,13 +27,14 @@ public class AppSceneController {
     private ChoiceBox<String> type_of_business;
 
     @FXML
-    private Menu register_business_button;
+    private Button register_business_button;
 
     @FXML
     private void initialize() {
         type_of_business.setValue("Select Type of Business");
         type_of_business.setItems(mainBusinessList);
     }
+    
     @FXML
     void RegisterBusiness(ActionEvent event) throws IOException {
         System.out.println("clicked!");
