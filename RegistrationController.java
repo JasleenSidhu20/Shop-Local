@@ -6,6 +6,10 @@ import javafx.scene.control.Alert;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import java.io.FileWriter;
+//import org.json.simple.JSONObject;
+import java.io.IOException;
+//import org.json.simple.JSONArray;
 
 
 public class RegistrationController {
@@ -65,7 +69,7 @@ public class RegistrationController {
                 //FIXME: Phone number less than length
                 Alert neg = new Alert(Alert.AlertType.ERROR);
                 neg.setTitle("ERROR");
-                neg.setHeaderText("Make sure you don't enter a negative number for questions 3, 4, 5, and 7!");
+                neg.setHeaderText("Make sure you enter a positive number for the zipcode and phone number!");
                 neg.showAndWait();
             } else {
                 String businessName = businessNameField.getText();
@@ -77,6 +81,18 @@ public class RegistrationController {
                 //FIXME: Make owner name first and last name
                 String email = emailField.getText();
                 int phoneNumber = Integer.parseInt(phoneNumberField.getText());
+                //JSONObject jsonObject = new JSONObject();
+                //jsonObject.put("businessName", "businessName");
+                //jsonObject.put("address", "address");
+                //jsonObject.put("city", "city");
+                //jsonObject.put("state", "state");
+                //jsonObject.put("zipcode", "zipcode");
+                //jsonObject.put("ownerName", "ownerName");
+                //JSONArray liste = new JSONArray();
+                //liste.add(jsonObject);
+                //FileWriter file = new FileWriter("businesses.json");
+                //file.write(jsonObject.toJSONString());
+                //file.flush();
                 businessNameField.clear();
                 addressField.clear();
                 cityField.clear();
@@ -90,10 +106,13 @@ public class RegistrationController {
         } catch (NumberFormatException nfe) {
             Alert a = new Alert(Alert.AlertType.ERROR);
             a.setTitle("ERROR");
-            a.setHeaderText("Make sure you enter a number for questions 3, 4, 5 and 7!");
+            a.setHeaderText("Make sure you enter a number for the zipcode and phone number!");
             a.showAndWait();
             //FIXME: Fix this 
-        }
+        } 
+        //catch (IOException ioe){
+
+        //}
     }
 
 }
