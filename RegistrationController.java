@@ -1,9 +1,14 @@
 
 import javafx.fxml.FXML;
+//import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert;
+
+//import java.net.URL;
+//import java.util.ResourceBundle;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -12,7 +17,7 @@ import javafx.event.ActionEvent;
 public class RegistrationController /*implements Initializable*/ {
 
     //allows different items in the choice box drop down (different types of businesses)
-    ObservableList<String> businessList = FXCollections.observableArrayList("Delivery Food", "Coffee/Tea", "Bars", "Restaraunt", "Desserts", "Grocery Stores", "Hair Salons", "Spas", "Car Wash", "Auto Repair", "Gas Stations", "Fashion");
+    ObservableList<String> businessList = FXCollections.observableArrayList("Coffee/Tea", "Bars", "Restaraunt", "Desserts", "Grocery Stores", "Hair Salons", "Spas", "Car Wash", "Auto Repair", "Gas Stations", "Fashion");
     //Small Business Information
 
     @FXML
@@ -40,13 +45,13 @@ public class RegistrationController /*implements Initializable*/ {
     private TextField phoneNumberField;
 
     @FXML 
-    private ChoiceBox businessTypeBox;
+    private ChoiceBox<String> businessTypeBox;
 
     @FXML
-    public Button registrationSubmitButton;
+    private Button registrationSubmitButton;
 
     @FXML
-    public void initialize() {
+    private void initialize() {
         businessTypeBox.setValue("Select Type of Business");
         businessTypeBox.setItems(businessList);
     }
