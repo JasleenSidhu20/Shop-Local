@@ -11,10 +11,14 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 
 public class AppSceneController {
 
+    ObservableList<String> typeBusinessList = FXCollections.observableArrayList("Delivery Food", "Coffee/Tea", "Bars", "Restaraunt", "Desserts", "Grocery Stores", "Hair Salons", "Spas", "Car Wash", "Auto Repair", "Gas Stations", "Fashion");
+    
     @FXML
     private TextField location_input;
 
@@ -22,10 +26,16 @@ public class AppSceneController {
     private Button main_search_button;
 
     @FXML
-    private ComboBox<?> type_of_business;
+    private ComboBox<String> type_of_business;
 
     @FXML
     private Menu register_business_button;
+
+    @FXML
+    private void initialize() {
+        type_of_business.setValue("Select Type of Business");
+        type_of_business.setItems(typeBusinessList);
+    }
 
     @FXML
     void RegisterBusiness(ActionEvent event) throws IOException {
