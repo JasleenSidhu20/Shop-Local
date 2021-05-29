@@ -18,7 +18,7 @@
       <AnchorPane layoutY="247.0" prefHeight="249.0" prefWidth="600.0" style="-fx-background-color: #000000;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
       <ImageView fitHeight="421.0" fitWidth="600.0" layoutX="7.0" layoutY="259.0" nodeOrientation="INHERIT" opacity="0.6" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="179.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <image>
-            <Image url="@../../IMG_4663.jpeg" />
+            <Image url="@Images/MainImage.jpeg" />
          </image>
          <cursor>
             <Cursor fx:constant="S_RESIZE" />

@@ -34,7 +34,7 @@ public class AppSceneController {
         type_of_business.setValue("Select Type of Business");
         type_of_business.setItems(mainBusinessList);
     }
-    
+
     @FXML
     void RegisterBusiness(ActionEvent event) throws IOException {
         System.out.println("clicked!");
@@ -47,7 +47,7 @@ public class AppSceneController {
 
     @FXML
     void SearchButton(ActionEvent event) throws IOException {
-        Parent register_parent = FXMLLoader.load(getClass().getResource("AppScene.fxml"));
+        Parent register_parent = FXMLLoader.load(getClass().getResource("Restaurant.fxml"));
         Scene register_scene = new Scene(register_parent);
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         app_stage.setScene(register_scene);
