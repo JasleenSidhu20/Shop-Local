@@ -1,12 +1,17 @@
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import java.io.FileWriter;
+import javafx.scene.Node;
 //import org.json.simple.JSONObject;
 import java.io.IOException;
 //import org.json.simple.JSONArray;
@@ -47,6 +52,18 @@ public class RegistrationController {
 
     @FXML
     private Button registrationSubmitButton;
+
+    @FXML
+    private Button buttonReturn;
+
+    @FXML
+    void buttonReturnFunction(ActionEvent event) throws IOException{
+        Parent regs_par = FXMLLoader.load(getClass().getResource("AppScene.fxml"));
+        Scene regs_scene = new Scene(regs_par);
+        Stage regs_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        regs_stage.setScene(regs_scene);
+        regs_stage.show();
+    }
 
     @FXML
     private void initialize() {
