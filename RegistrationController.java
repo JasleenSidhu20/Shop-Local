@@ -42,7 +42,6 @@ public class RegistrationController /*implements Initializable*/ {
     @FXML 
     private ChoiceBox businessTypeBox;
 
-
     @FXML
     public Button registrationSubmitButton;
 
