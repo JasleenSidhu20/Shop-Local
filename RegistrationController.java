@@ -3,6 +3,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert;
+import javafx.event.ActionEvent;
 
 public class RegistrationController {
 
@@ -37,7 +38,8 @@ public class RegistrationController {
     private Button registrationSubmitButton;
 
     //@FXML
-    registrationSubmitButton.setOnAction(event -> {
+    
+      void nameTemp(ActionEvent event) {
         try {
             if (businessNameField.getText().isEmpty() || addressField.getText().isEmpty() || cityField.getText().isEmpty()
                 || stateField.getText().isEmpty() || zipcodeField.getText().equals("") || ownerNameField.getText().isEmpty()
@@ -78,6 +80,6 @@ public class RegistrationController {
             a.showAndWait();
             //FIXME: Fix this 
         }
-    });
+    }
 
 }
