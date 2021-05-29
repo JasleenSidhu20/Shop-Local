@@ -4,7 +4,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Menu;
 import javafx.scene.control.TextField;
 
-public class PleaseProvideControllerClassName {
+public class AppSceneController {
 
     @FXML
     private TextField location_input;
@@ -19,17 +19,19 @@ public class PleaseProvideControllerClassName {
     private Menu register_business_button;
 
     @FXML
-    void RegisterBusiness(ActionEvent event) {
+    public void RegisterBusiness(ActionEvent event) throws IOException {
+        Main m = new Main();
+        m.changeScene("Registration.fxml");
+    }
+
+    @FXML
+    public void SearchButton(ActionEvent event) throws IOException {
+        String location = location_input.getText().toString();
 
     }
 
     @FXML
-    void SearchButton(ActionEvent event) {
-
-    }
-
-    @FXML
-    void TypeOfBusiness(ActionEvent event) {
+    public void TypeOfBusiness(ActionEvent event) throws IOException {
 
     }
 
