@@ -1,23 +1,19 @@
-import java.io.IOException;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert;
-
-import javafx.scene.control.Button;
+import javafx.event.ActionEvent;
 
 
 public class RegistrationController {
     private ShopLocal business;
 
     @FXML
-    private void goRegistration() throws IOException{
+    /*private void goRegistration() throws IOException{
         business.showRegistration();
-    }
+    }*/
     //allows different items in the choice box drop down (different types of businesses)
     ObservableList<String> businessList = FXCollections.observableArrayList("Restaraunt", "Fashion", "Grocery");
     //Small Business Information
@@ -61,13 +57,14 @@ public class RegistrationController {
     private Button registrationSubmitButton;
 
     //Submit Button should return to the main page (AppScene)
-    private void goRegistrationSubmit() throws IOException{
+    /*private void goRegistrationSubmit() throws IOException{
         business.showMainView();
-    }
+    }*/
 
 }
     //@FXML
-    registrationSubmitButton.setOnAction(event -> {
+    
+      void nameTemp(ActionEvent event) {
         try {
             if (businessNameField.getText().isEmpty() || addressField.getText().isEmpty() || cityField.getText().isEmpty()
                 || stateField.getText().isEmpty() || zipcodeField.getText().equals("") || ownerNameField.getText().isEmpty()
@@ -108,6 +105,6 @@ public class RegistrationController {
             a.showAndWait();
             //FIXME: Fix this 
         }
-    });
+    }
 
 }
