@@ -17,7 +17,7 @@ import javafx.event.ActionEvent;
 
 public class AppSceneController {
     
-    ObservableList<String> businessList = FXCollections.observableArrayList("Coffee/Tea", "Bars", "Restaraunt", "Desserts", "Grocery Stores", "Hair Salons", "Spas", "Car Wash", "Auto Repair", "Gas Stations", "Fashion");
+    ObservableList<String> mainBusinessList = FXCollections.observableArrayList("Coffee/Tea", "Bars", "Restaraunt", "Desserts", "Grocery Stores", "Hair Salons", "Spas", "Car Wash", "Auto Repair", "Gas Stations", "Fashion");
     @FXML
     private TextField location_input;
 
@@ -33,7 +33,7 @@ public class AppSceneController {
     @FXML
     private void initialize() {
         type_of_business.setValue("Select Type of Business");
-        type_of_business.setItems(businessList);
+        type_of_business.setItems(mainBusinessList);
     }
     @FXML
     void RegisterBusiness(ActionEvent event) throws IOException {
