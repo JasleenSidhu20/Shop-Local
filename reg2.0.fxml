@@ -69,5 +69,6 @@
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </padding>
       </VBox>
+      <Button fx:id="buttonReturn" layoutX="467.0" layoutY="-3.0" mnemonicParsing="false" onAction="#buttonReturnFunction" text="Return to Home Page" />
    </children>
 </AnchorPane>

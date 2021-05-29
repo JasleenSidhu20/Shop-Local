@@ -54,6 +54,18 @@ public class RegistrationController {
     private Button registrationSubmitButton;
 
     @FXML
+    private Button buttonReturn;
+
+    @FXML
+    void buttonReturnFunction(ActionEvent event) throws IOException{
+        Parent regs_par = FXMLLoader.load(getClass().getResource("AppScene.fxml"));
+        Scene regs_scene = new Scene(regs_par);
+        Stage regs_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        regs_stage.setScene(regs_scene);
+        regs_stage.show();
+    }
+
+    @FXML
     private void initialize() {
         businessTypeBox.setValue("Select Type of Business");
         businessTypeBox.setItems(businessList);
