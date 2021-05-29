@@ -37,9 +37,8 @@ public class RegistrationController {
     @FXML
     private Button registrationSubmitButton;
 
-    //@FXML
-    
-      void nameTemp(ActionEvent event) {
+    @FXML
+      void goRegistrationSubmit(ActionEvent event) {
         try {
             if (businessNameField.getText().isEmpty() || addressField.getText().isEmpty() || cityField.getText().isEmpty()
                 || stateField.getText().isEmpty() || zipcodeField.getText().equals("") || ownerNameField.getText().isEmpty()
@@ -72,6 +71,7 @@ public class RegistrationController {
                 ownerNameField.clear();
                 emailField.clear();
                 phoneNumberField.clear();
+
             }
         } catch (NumberFormatException nfe) {
             Alert a = new Alert(Alert.AlertType.ERROR);
