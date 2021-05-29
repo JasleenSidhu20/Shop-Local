@@ -8,8 +8,12 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.fxml.FXMLLoader;
+import java.io.IOException;
+
+
 //import javafx.scene.control.MenuItem;
 public class ShopLocal extends Application {
+    private Stage primaryStage;
     /*
     @FXML
     private MenuItem delete;
@@ -22,23 +26,34 @@ public class ShopLocal extends Application {
         launch(args);
     }
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage) throws IOException {
         this.primaryStage = primaryStage;
         this.primaryStage.setTitle("ShopLocal Website");
-        showMainView();
 
+        showMainView();
+        showRegistration();
         Parent root = FXMLLoader.load(getClass().getResource("AppScene.fxml"));
         Scene scene = new Scene(root);
         primaryStage.setTitle("Title");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
-    private void showMainView() throws IOException{
+
+    public void showMainView() throws IOException{
         FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(ShopLocal.class.getResource("Registration.fxml")); //change to AppScene instead of Registration
 //        loader.setLocation(AppScene.class.getResource("AppScene.fxml"));
         mainLayout = loader.load();
         Scene scene = new Scene(mainLayout);
         primaryStage.setScene(scene);
         primaryStage.show();
-    } 
+    }
+
+    public void showRegistration() throws IOException{
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(ShopLocal.class.getResource("Registration.fxml"));
+        BorderPane registrationInfo = loader.load();
+        mainLayout.setCenter(registrationInfo);
+    }
+    
 }

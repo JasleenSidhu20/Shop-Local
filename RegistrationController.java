@@ -1,3 +1,4 @@
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
@@ -5,7 +6,17 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.Alert;
 import javafx.event.ActionEvent;
 
+
 public class RegistrationController {
+    private ShopLocal business;
+
+    @FXML
+    /*private void goRegistration() throws IOException{
+        business.showRegistration();
+    }*/
+    //allows different items in the choice box drop down (different types of businesses)
+    ObservableList<String> businessList = FXCollections.observableArrayList("Restaraunt", "Fashion", "Grocery");
+    //Small Business Information
 
     @FXML
     private TextField businessNameField;
@@ -31,14 +42,34 @@ public class RegistrationController {
     @FXML
     private TextField phoneNumberField;
 
+    @FXML 
+    private ChoiceBox<?> businessTypeBox;
+
+    @FXML
+    private void initialize(){
+        businessTypeBox.setValue("Select Type of Business");
+        businessTypeBox.setItems(businessList);
+    }
     @FXML
     private ChoiceBox<?> businessTypeBox;
 
     @FXML
     private Button registrationSubmitButton;
 
+<<<<<<< HEAD
     @FXML
       void goRegistrationSubmit(ActionEvent event) {
+=======
+    //Submit Button should return to the main page (AppScene)
+    /*private void goRegistrationSubmit() throws IOException{
+        business.showMainView();
+    }*/
+
+}
+    //@FXML
+    
+      void nameTemp(ActionEvent event) {
+>>>>>>> 46aed448aec8b6d9082c89424cbe12f972236006
         try {
             if (businessNameField.getText().isEmpty() || addressField.getText().isEmpty() || cityField.getText().isEmpty()
                 || stateField.getText().isEmpty() || zipcodeField.getText().equals("") || ownerNameField.getText().isEmpty()
