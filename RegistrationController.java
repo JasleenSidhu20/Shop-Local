@@ -1,12 +1,17 @@
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import java.io.FileWriter;
+import javafx.scene.Node;
 //import org.json.simple.JSONObject;
 import java.io.IOException;
 //import org.json.simple.JSONArray;
@@ -56,7 +61,7 @@ public class RegistrationController {
 
 
     @FXML
-      void goRegistrationSubmit(ActionEvent event) {
+      void goRegistrationSubmit(ActionEvent event) throws IOException {
         try {
             if (businessNameField.getText().isEmpty() || addressField.getText().isEmpty() || cityField.getText().isEmpty()
                 || stateField.getText().isEmpty() || zipcodeField.getText().equals("") || ownerNameField.getText().isEmpty()
@@ -101,7 +106,11 @@ public class RegistrationController {
                 ownerNameField.clear();
                 emailField.clear();
                 phoneNumberField.clear();
-
+                Parent reg_par = FXMLLoader.load(getClass().getResource("AppScene.fxml"));
+                Scene reg_scene = new Scene(reg_par);
+                Stage reg_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                reg_stage.setScene(reg_scene);
+                reg_stage.show();
             }
         } catch (NumberFormatException nfe) {
             Alert a = new Alert(Alert.AlertType.ERROR);
