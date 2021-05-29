@@ -8,15 +8,19 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.fxml.FXMLLoader;
-import java.io.IOException;
-
+//import javafx.scene.control.MenuItem;
 public class ShopLocal extends Application {
-    private Stage primaryStage;
-    private BorderPane mainLayout;
+    /*
+    @FXML
+    private MenuItem delete;
+
+    @FXML
+    void deleteProgram(ActionEvent event) {
+    }
+    */
     public static void main(String[] args){
         launch(args);
     }
-    
     @Override
     public void start(Stage primaryStage) throws Exception {
         this.primaryStage = primaryStage;
