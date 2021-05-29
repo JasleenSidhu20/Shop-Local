@@ -143,11 +143,10 @@ public class RegistrationController {
                 a.setTitle("ERROR");
                 a.setHeaderText("Make sure you enter a number for the zipcode and phone number!");
                 a.showAndWait();
-                //FIXME: Fix this 
                 } 
-                //catch (IOException ioe){
+                catch (IOException ioe){
 
-                //}
+                }
             }
 
     public String tooString(String businessName,String address, String city, String state, int zipcode, String ownerName ) {
