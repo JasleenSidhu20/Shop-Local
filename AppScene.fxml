@@ -15,6 +15,12 @@
    <children>
       <AnchorPane layoutY="26.0" prefHeight="205.0" prefWidth="600.0">
          <children>
+<<<<<<< HEAD
+            <TextField layoutX="274.0" layoutY="118.0" />
+            <Button layoutX="435.0" layoutY="118.0" mnemonicParsing="false" text="Search" />
+            <ComboBox layoutX="124.0" layoutY="118.0" prefWidth="150.0" style="-fx-background-color: aqua; -fx-region-border: #000000;" />
+            <Label layoutX="142.0" layoutY="14.0" text="Shop Local">
+=======
             <TextField fx:id="location_input" layoutX="274.0" layoutY="118.0" promptText="location">
                <font>
                   <Font name="Avenir Book" size="13.0" />
@@ -24,6 +30,7 @@
                   <Font name="Avenir Book" size="13.0" />
                </font></Button>
             <Label alignment="CENTER" contentDisplay="CENTER" layoutX="142.0" layoutY="14.0" text="Shop Local" textAlignment="CENTER">
+>>>>>>> 8a3f59231a01be7dc9cbe2a43486787e368d6cf4
                <font>
                   <Font name="Avenir Book" size="64.0" />
                </font>

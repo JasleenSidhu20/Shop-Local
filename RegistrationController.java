@@ -51,8 +51,8 @@ public class RegistrationController {
         businessTypeBox.setItems(businessList);
     }
 
+
     @FXML
-    
       void goRegistrationSubmit(ActionEvent event) {
         try {
             if (businessNameField.getText().isEmpty() || addressField.getText().isEmpty() || cityField.getText().isEmpty()
