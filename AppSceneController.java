@@ -4,16 +4,11 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-
 import java.io.IOException;
-
-//import javafx.collections.FXCollections;
-//import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 
 public class AppSceneController {
@@ -33,7 +28,7 @@ public class AppSceneController {
     @FXML
     void RegisterBusiness(ActionEvent event) throws IOException {
         System.out.println("clicked!");
-        Parent register_parent = FXMLLoader.load(getClass().getResource("Registration.fxml"));
+        Parent register_parent = FXMLLoader.load(getClass().getResource("reg2.0.fxml"));
         Scene register_scene = new Scene(register_parent);
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         app_stage.setScene(register_scene);
@@ -42,7 +37,7 @@ public class AppSceneController {
 
     @FXML
     void SearchButton(ActionEvent event) throws IOException {
-        Parent register_parent = FXMLLoader.load(getClass().getResource("Registration.fxml"));
+        Parent register_parent = FXMLLoader.load(getClass().getResource("reg2.0.fxml"));
         Scene register_scene = new Scene(register_parent);
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         app_stage.setScene(register_scene);
