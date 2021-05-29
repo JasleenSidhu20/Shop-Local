@@ -14,13 +14,16 @@
    <children>
       <AnchorPane layoutY="26.0" prefHeight="205.0" prefWidth="600.0">
          <children>
-            <TextField layoutX="274.0" layoutY="118.0" />
-            <Button layoutX="435.0" layoutY="118.0" mnemonicParsing="false" text="Search">
+            <TextField fx:id="location_input" layoutX="274.0" layoutY="118.0" promptText="location">
+               <font>
+                  <Font name="Avenir Book" size="13.0" />
+               </font></TextField>
+            <Button fx:id="main_search_button" layoutX="435.0" layoutY="118.0" mnemonicParsing="false" onAction="#SearchButton" text="Search">
                <font>
                   <Font name="Avenir Book" size="13.0" />
                </font></Button>
-            <ComboBox layoutX="124.0" layoutY="118.0" prefWidth="150.0" style="-fx-background-color: #FFFFFF; -fx-region-border: #000000;" />
-            <Label layoutX="142.0" layoutY="14.0" text="Shop Local">
+            <ComboBox fx:id="type_of_business" layoutX="124.0" layoutY="118.0" onAction="#TypeOfBusiness" prefWidth="150.0" style="-fx-background-color: #FFFFFF; -fx-region-border: #000000;" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="142.0" layoutY="14.0" text="Shop Local" textAlignment="CENTER">
                <font>
                   <Font name="Avenir Book" size="64.0" />
                </font>
@@ -36,7 +39,7 @@
       <Separator layoutX="-7.0" layoutY="230.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
       <MenuBar AnchorPane.rightAnchor="-10.0" AnchorPane.topAnchor="0.0">
         <menus>
-          <Menu mnemonicParsing="false" text="Register as a Business" />
+          <Menu fx:id="register_business_button" mnemonicParsing="false" onAction="#RegisterBusiness" text="Register as a Business" />
         </menus>
       </MenuBar>
    </children>
