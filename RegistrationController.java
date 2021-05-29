@@ -50,21 +50,20 @@ public class RegistrationController {
         businessTypeBox.setValue("Select Type of Business");
         businessTypeBox.setItems(businessList);
     }
-    @FXML
-    private ChoiceBox<?> businessTypeBox;
+    
 
     @FXML
     private Button registrationSubmitButton;
 
 
     @FXML
-      void goRegistrationSubmit(ActionEvent event) {
+//      void goRegistrationSubmit(ActionEvent event) {
     //Submit Button should return to the main page (AppScene)
     /*private void goRegistrationSubmit() throws IOException{
         business.showMainView();
     }*/
 
-}
+//}
     //@FXML
     
       void nameTemp(ActionEvent event) {

@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AppSceneController">
    <children>
       <AnchorPane layoutY="26.0" prefHeight="205.0" prefWidth="600.0">
          <children>
@@ -22,12 +23,20 @@
                <font>
                   <Font name="Avenir Book" size="13.0" />
                </font></Button>
-            <ComboBox fx:id="type_of_business" layoutX="124.0" layoutY="118.0" onAction="#TypeOfBusiness" prefWidth="150.0" style="-fx-background-color: #FFFFFF; -fx-region-border: #000000;" />
             <Label alignment="CENTER" contentDisplay="CENTER" layoutX="142.0" layoutY="14.0" text="Shop Local" textAlignment="CENTER">
                <font>
                   <Font name="Avenir Book" size="64.0" />
                </font>
             </Label>
+            <MenuButton layoutX="111.0" layoutY="118.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="162.0" text="Type of Business">
+              <items>
+                
+                
+                  <MenuItem mnemonicParsing="false" text="Restaurant" />
+                  <MenuItem id="clothing" mnemonicParsing="false" text="Clothing" />
+                  <MenuItem mnemonicParsing="false" text="Cafe" />
+              </items>
+            </MenuButton>
          </children>
       </AnchorPane>
       <MenuBar layoutX="78.0" layoutY="14.0" prefHeight="27.0" prefWidth="444.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
@@ -37,7 +46,7 @@
          </font>
       </Label>
       <Separator layoutX="-7.0" layoutY="230.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-      <MenuBar AnchorPane.rightAnchor="-10.0" AnchorPane.topAnchor="0.0">
+      <MenuBar onMouseClicked="#RegisterBusiness" AnchorPane.rightAnchor="-10.0" AnchorPane.topAnchor="0.0">
         <menus>
           <Menu fx:id="register_business_button" mnemonicParsing="false" onAction="#RegisterBusiness" text="Register as a Business" />
         </menus>

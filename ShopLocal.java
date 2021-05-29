@@ -1,3 +1,4 @@
+import java.io.*;
 import javafx.application.Application;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -6,10 +7,11 @@ import javafx.fxml.FXMLLoader;
 
 
 public class ShopLocal extends Application {
-   
+
+    private static Stage stg;
+
     @Override
     public void start(Stage primaryStage) throws Exception {
-<<<<<<< HEAD
  //       this.primaryStage = primaryStage;
  //       this.primaryStage.setTitle("ShopLocal Website");
  //       showMainView();
@@ -27,8 +29,9 @@ public class ShopLocal extends Application {
 //         Scene scene = new Scene(mainLayout);
 //         primaryStage.setScene(scene);
 //         primaryStage.show();
-     } 
-=======
+//     } 
+        stg = primaryStage;
+        primaryStage.setResizable(false);
         Parent root = FXMLLoader.load(getClass().getResource("AppScene.fxml"));
         primaryStage.setTitle("Shop Local Businesses");
         primaryStage.setScene(new Scene(root, 800, 500));
@@ -36,9 +39,13 @@ public class ShopLocal extends Application {
 
     }
 
+    public void changeScene(String fxml) throws IOException {
+        Parent pane = FXMLLoader.load(getClass().getResource(fxml));
+        stg.getScene().setRoot(pane);
+    }
+
     public static void main(String[] args){
         launch(args);
     }
     
->>>>>>> d4be6208b590c354db4e349bea0e8b4eef0ba262
 }
