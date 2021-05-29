@@ -1,21 +1,23 @@
 
 import javafx.fxml.FXML;
+//import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert;
+
+//import java.net.URL;
+//import java.util.ResourceBundle;
+
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 
 
-public class RegistrationController {
-    private ShopLocal business;
+public class RegistrationController /*implements Initializable*/ {
 
-    @FXML
-    /*private void goRegistration() throws IOException{
-        business.showRegistration();
-    }*/
     //allows different items in the choice box drop down (different types of businesses)
-    ObservableList<String> businessList = FXCollections.observableArrayList("Restaraunt", "Fashion", "Grocery");
+    ObservableList<String> businessList = FXCollections.observableArrayList("Coffee/Tea", "Bars", "Restaraunt", "Desserts", "Grocery Stores", "Hair Salons", "Spas", "Car Wash", "Auto Repair", "Gas Stations", "Fashion");
     //Small Business Information
 
     @FXML
@@ -43,20 +45,25 @@ public class RegistrationController {
     private TextField phoneNumberField;
 
     @FXML 
-    private ChoiceBox<?> businessTypeBox;
-
-    @FXML
-    private void initialize(){
-        businessTypeBox.setValue("Select Type of Business");
-        businessTypeBox.setItems(businessList);
-    }
-    @FXML
-    private ChoiceBox<?> businessTypeBox;
+    private ChoiceBox<String> businessTypeBox;
 
     @FXML
     private Button registrationSubmitButton;
 
     @FXML
+    private void initialize() {
+        businessTypeBox.setValue("Select Type of Business");
+        businessTypeBox.setItems(businessList);
+    }
+
+    @FXML
+<<<<<<< HEAD
+    private Button registrationSubmitButton;
+
+    @FXML
+=======
+    
+>>>>>>> 8a3f59231a01be7dc9cbe2a43486787e368d6cf4
       void goRegistrationSubmit(ActionEvent event) {
         try {
             if (businessNameField.getText().isEmpty() || addressField.getText().isEmpty() || cityField.getText().isEmpty()
