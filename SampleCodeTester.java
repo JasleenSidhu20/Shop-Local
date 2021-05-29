@@ -9,7 +9,7 @@ public class SampleCodeTester extends Application {
    
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("reg2.0.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("AppScene.fxml"));
         primaryStage.setTitle("Shop Local Businesses");
         primaryStage.setScene(new Scene(root, 800, 600));
         primaryStage.show();

@@ -1,20 +1,15 @@
 
 import javafx.fxml.FXML;
-//import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert;
-
-//import java.net.URL;
-//import java.util.ResourceBundle;
-
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 
 
-public class RegistrationController /*implements Initializable*/ {
+public class RegistrationController {
 
     //allows different items in the choice box drop down (different types of businesses)
     ObservableList<String> businessList = FXCollections.observableArrayList("Coffee/Tea", "Bars", "Restaraunt", "Desserts", "Grocery Stores", "Hair Salons", "Spas", "Car Wash", "Auto Repair", "Gas Stations", "Fashion");
