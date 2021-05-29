@@ -14,7 +14,7 @@ public class ShopLocal extends Application {
     public void start(Stage primaryStage) throws Exception {
         stg = primaryStage;
         primaryStage.setResizable(false);
-        Parent root = FXMLLoader.load(getClass().getResource("AppScene.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("reg2.0.fxml"));
         primaryStage.setTitle("Shop Local Businesses");
         primaryStage.setScene(new Scene(root, 800, 500));
         primaryStage.show();

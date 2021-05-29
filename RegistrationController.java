@@ -11,7 +11,7 @@ import javafx.event.ActionEvent;
 public class RegistrationController {
 
     //allows different items in the choice box drop down (different types of businesses)
-    ObservableList<String> businessList = FXCollections.observableArrayList("Coffee/Tea", "Bars", "Restaraunt", "Desserts", "Grocery Stores", "Hair Salons", "Spas", "Car Wash", "Auto Repair", "Gas Stations", "Fashion");
+    ObservableList<String> businessList = FXCollections.observableArrayList("Coffee/Tea", "afea", "Bars", "Restaraunt", "Desserts", "Grocery Stores", "Hair Salons", "Spas", "Car Wash", "Auto Repair", "Gas Stations", "Fashion");
     //Small Business Information
 
     @FXML
