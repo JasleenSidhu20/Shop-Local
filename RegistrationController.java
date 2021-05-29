@@ -56,14 +56,8 @@ public class RegistrationController /*implements Initializable*/ {
         businessTypeBox.setItems(businessList);
     }
 
-    @FXML
-<<<<<<< HEAD
-    private Button registrationSubmitButton;
 
     @FXML
-=======
-    
->>>>>>> 8a3f59231a01be7dc9cbe2a43486787e368d6cf4
       void goRegistrationSubmit(ActionEvent event) {
         try {
             if (businessNameField.getText().isEmpty() || addressField.getText().isEmpty() || cityField.getText().isEmpty()
