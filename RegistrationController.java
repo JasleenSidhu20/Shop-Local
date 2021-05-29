@@ -12,6 +12,11 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import java.io.FileWriter;
 import javafx.scene.Node;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.List;
+
 //import org.json.simple.JSONObject;
 import java.io.IOException;
 //import org.json.simple.JSONArray;
@@ -98,18 +103,11 @@ public class RegistrationController {
                 //FIXME: Make owner name first and last name
                 String email = emailField.getText();
                 int phoneNumber = Integer.parseInt(phoneNumberField.getText());
-                //JSONObject jsonObject = new JSONObject();
-                //jsonObject.put("businessName", "businessName");
-                //jsonObject.put("address", "address");
-                //jsonObject.put("city", "city");
-                //jsonObject.put("state", "state");
-                //jsonObject.put("zipcode", "zipcode");
-                //jsonObject.put("ownerName", "ownerName");
-                //JSONArray liste = new JSONArray();
-                //liste.add(jsonObject);
-                //FileWriter file = new FileWriter("businesses.json");
-                //file.write(jsonObject.toJSONString());
-                //file.flush();
+                File file = new File("business_names.txt");
+                PrintWriter printWriter = null;
+                printWriter = new PrintWriter(file);
+                printWriter.println(tooString( businessName, address, city, state, zipcode, ownerName));
+                printWriter.close();
                 businessNameField.clear();
                 addressField.clear();
                 cityField.clear();
@@ -123,17 +121,44 @@ public class RegistrationController {
                 Stage reg_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 reg_stage.setScene(reg_scene);
                 reg_stage.show();
-            }
-        } catch (NumberFormatException nfe) {
-            Alert a = new Alert(Alert.AlertType.ERROR);
-            a.setTitle("ERROR");
-            a.setHeaderText("Make sure you enter a number for the zipcode and phone number!");
-            a.showAndWait();
-            //FIXME: Fix this 
-        } 
-        //catch (IOException ioe){
+                /* 
+                JSONObject jsonObject = new JSONObject();
+                jsonObject.put("businessName", "businessName");
+                jsonObject.put("address", "address");
+                jsonObject.put("city", "city");
+                jsonObject.put("state", "state");
+                jsonObject.put("zipcode", "zipcode");
+                jsonObject.put("ownerName", "ownerName");
+                JSONArray liste = new JSONArray();
+                liste.add(jsonObject);
+                FileWriter file = new FileWriter("businesses.json");
+                file.write(liste.toJSONString());
+                file.flush();
+                */
+                } 
+                } catch (FileNotFoundException e) {
+                    System.out.println(e.toString());
+                } catch (NumberFormatException nfe) {
+                Alert a = new Alert(Alert.AlertType.ERROR);
+                a.setTitle("ERROR");
+                a.setHeaderText("Make sure you enter a number for the zipcode and phone number!");
+                a.showAndWait();
+                //FIXME: Fix this 
+                } 
+                //catch (IOException ioe){
 
-        //}
+                //}
+            }
+
+    public String tooString(String businessName,String address, String city, String state, int zipcode, String ownerName ) {
+        String str = "";
+        str += "Business Name: " + businessName + "\n";
+        str += "Address: " + address + "\n";
+        str += "City: " + city + "\n";
+        str += "State: " + state + "\n";
+        str += "Zipcode: " + zipcode + "\n";
+        str += "Owner's Name: " + ownerName + "\n";
+        return str;
     }
 
 }
