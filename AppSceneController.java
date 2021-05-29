@@ -33,7 +33,7 @@ public class AppSceneController {
     @FXML
     void RegisterBusiness(ActionEvent event) throws IOException {
         System.out.println("clicked!");
-        Parent register_parent = FXMLLoader.load(getClass().getResource("Registration.fxml"));
+        Parent register_parent = FXMLLoader.load(getClass().getResource("reg2.0.fxml"));
         Scene register_scene = new Scene(register_parent);
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         app_stage.setScene(register_scene);
@@ -42,7 +42,7 @@ public class AppSceneController {
 
     @FXML
     void SearchButton(ActionEvent event) throws IOException {
-        Parent register_parent = FXMLLoader.load(getClass().getResource("Registration.fxml"));
+        Parent register_parent = FXMLLoader.load(getClass().getResource("reg2.0.fxml"));
         Scene register_scene = new Scene(register_parent);
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         app_stage.setScene(register_scene);
