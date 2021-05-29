@@ -36,7 +36,7 @@ public class RegistrationController {
     @FXML
     private Button registrationSubmitButton;
 
-    //@FXML
+    @FXML
     registrationSubmitButton.setOnAction(event -> {
         try {
             if (businessNameField.getText().isEmpty() || addressField.getText().isEmpty() || cityField.getText().isEmpty()
