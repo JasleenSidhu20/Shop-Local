@@ -3,8 +3,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Menu;
 import javafx.scene.control.TextField;
+import javafx.event.ActionEvent;
 
-public class PleaseProvideControllerClassName {
+public class AppSceneController {
 
     @FXML
     private TextField location_input;

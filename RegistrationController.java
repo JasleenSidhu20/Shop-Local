@@ -56,14 +56,9 @@ public class RegistrationController {
     @FXML
     private Button registrationSubmitButton;
 
-<<<<<<< HEAD
-    @FXML
-    registrationSubmitButton.setOnAction(event -> {
-=======
-<<<<<<< HEAD
+
     @FXML
       void goRegistrationSubmit(ActionEvent event) {
-=======
     //Submit Button should return to the main page (AppScene)
     /*private void goRegistrationSubmit() throws IOException{
         business.showMainView();
@@ -73,8 +68,6 @@ public class RegistrationController {
     //@FXML
     
       void nameTemp(ActionEvent event) {
->>>>>>> 46aed448aec8b6d9082c89424cbe12f972236006
->>>>>>> d4be6208b590c354db4e349bea0e8b4eef0ba262
         try {
             if (businessNameField.getText().isEmpty() || addressField.getText().isEmpty() || cityField.getText().isEmpty()
                 || stateField.getText().isEmpty() || zipcodeField.getText().equals("") || ownerNameField.getText().isEmpty()
