@@ -15,8 +15,11 @@
       <AnchorPane layoutY="26.0" prefHeight="205.0" prefWidth="600.0">
          <children>
             <TextField layoutX="274.0" layoutY="118.0" />
-            <Button layoutX="435.0" layoutY="118.0" mnemonicParsing="false" text="Search" />
-            <ComboBox layoutX="124.0" layoutY="118.0" prefWidth="150.0" style="-fx-background-color: #FFFF; -fx-region-border: #00000;" />
+            <Button layoutX="435.0" layoutY="118.0" mnemonicParsing="false" text="Search">
+               <font>
+                  <Font name="Avenir Book" size="13.0" />
+               </font></Button>
+            <ComboBox layoutX="124.0" layoutY="118.0" prefWidth="150.0" style="-fx-background-color: #FFFFFF; -fx-region-border: #000000;" />
             <Label layoutX="142.0" layoutY="14.0" text="Shop Local">
                <font>
                   <Font name="Avenir Book" size="64.0" />
@@ -27,7 +30,7 @@
       <MenuBar layoutX="78.0" layoutY="14.0" prefHeight="27.0" prefWidth="444.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
       <Label text="Shop Local" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="5.0">
          <font>
-            <Font size="14.0" />
+            <Font name="Avenir Book" size="14.0" />
          </font>
       </Label>
       <Separator layoutX="-7.0" layoutY="230.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
