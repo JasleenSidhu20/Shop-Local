@@ -76,7 +76,12 @@
                         </ImageView>
                         <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                            <children>
-                              <Text fx:id="fifthRestaurant" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="152.56590270996094" />
+                              <Text fx:id="fifthRestaurant" fill="#6d6d6d" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="152.56590270996094">
+                                 <font>
+                                    <Font name="Georgia" size="14.0" />
+                                 </font>
+                              </Text>
+                              <Separator prefWidth="200.0" />
                            </children>
                         </VBox>
                         <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
@@ -165,7 +170,12 @@
                         </VBox>
                         <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
                            <children>
-                              <Text fx:id="sixthRestaurant" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="152.56590270996094" />
+                              <Text fx:id="sixthRestaurant" fill="#6d6d6d" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="152.56590270996094">
+                                 <font>
+                                    <Font name="Georgia" size="14.0" />
+                                 </font>
+                              </Text>
+                              <Separator prefWidth="200.0" />
                            </children>
                         </VBox>
                      </children>
