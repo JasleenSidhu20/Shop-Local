@@ -76,22 +76,12 @@
                         </ImageView>
                         <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                            <children>
-                              <Text fill="#6d6d6d" strokeType="OUTSIDE" strokeWidth="0.0" text="Sipan Peruvian Restaurant &amp; Bar" textAlignment="CENTER" wrappingWidth="154.427001953125">
-                                 <font>
-                                    <Font name="Georgia" size="14.0" />
-                                 </font>
-                              </Text>
-                              <Separator prefWidth="200.0" />
-                              <Text fill="#313131" strokeType="OUTSIDE" strokeWidth="0.0" text="3.5 miles" textAlignment="CENTER" wrappingWidth="101.26084899902344">
-                                 <font>
-                                    <Font name="Georgia" size="12.0" />
-                                 </font>
-                              </Text>
+                              <Text fx:id="fifthRestaurant" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="152.56590270996094" />
                            </children>
                         </VBox>
                         <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                            <children>
-                              <Text fill="#6d6d6d" strokeType="OUTSIDE" strokeWidth="0.0" text="La Cuvea Mex Grill" textAlignment="CENTER" wrappingWidth="154.427001953125">
+                              <Text fill="#6d6d6d" strokeType="OUTSIDE" strokeWidth="0.0" text="La Cueva Mex Grill" textAlignment="CENTER" wrappingWidth="154.427001953125">
                                  <font>
                                     <Font name="Georgia" size="14.0" />
                                  </font>
@@ -175,17 +165,7 @@
                         </VBox>
                         <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
                            <children>
-                              <Text fill="#6d6d6d" strokeType="OUTSIDE" strokeWidth="0.0" text="Zeni Ethiopian Restaurant" textAlignment="CENTER" wrappingWidth="154.427001953125">
-                                 <font>
-                                    <Font name="Georgia" size="14.0" />
-                                 </font>
-                              </Text>
-                              <Separator prefWidth="200.0" />
-                              <Text fill="#313131" strokeType="OUTSIDE" strokeWidth="0.0" text="3.6 miles" textAlignment="CENTER" wrappingWidth="101.26084899902344">
-                                 <font>
-                                    <Font name="Georgia" size="12.0" />
-                                 </font>
-                              </Text>
+                              <Text fx:id="sixthRestaurant" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="152.56590270996094" />
                            </children>
                         </VBox>
                      </children>

@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class RestaurantController {
@@ -13,6 +14,12 @@ public class RestaurantController {
     @FXML
     private Button returnButton;
 
+    @FXML
+    private Text fifthRestaurant;
+
+    @FXML
+    private Text sixthRestaurant;
+    
     @FXML
     void ReturnFunction(ActionEvent event) throws IOException {
         Parent reg_par = FXMLLoader.load(getClass().getResource("AppScene.fxml"));
